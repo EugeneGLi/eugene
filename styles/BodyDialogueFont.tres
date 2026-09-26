@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cb1531egu2hng"]
+
+[ext_resource type="FontFile" uid="uid://b55d683o878uy" path="res://styles/IBMPlexMono-Regular.ttf" id="1_wbrq6"]
+
+[resource]
+base_font = ExtResource("1_wbrq6")
+spacing_top = 1

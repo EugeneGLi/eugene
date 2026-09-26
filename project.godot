@@ -28,7 +28,7 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://styles/New_File.tres",
-"New_File": "res://styles/New_File.tres"
+"Dialogue": "res://styles/New_File.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://styles/New_File.tres"]

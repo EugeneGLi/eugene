@@ -36,9 +36,15 @@ overrides = {
 "box_color_use_global": "false",
 "box_panel": "\"res://styles/dialogueBoxBody.tres\"",
 "box_size": "Vector2(1000, 200)",
+"name_label_box_modulate": "Color(1, 1, 1, 1)",
+"name_label_box_offset": "Vector2(-41, -30)",
+"name_label_box_panel": "\"res://styles/NameBox.tres\"",
+"name_label_box_use_global_color": "false",
 "name_label_font": "\"res://styles/IBMPlexMono-Regular.ttf\"",
-"normal_font": "\"res://styles/IBMPlexMono-Regular.ttf\"",
-"text_size": "25.0",
+"next_indicator_enabled": "false",
+"next_indicator_show_on_questions": "false",
+"normal_font": "\"res://styles/BodyDialogueFont.tres\"",
+"text_size": "20.0",
 "text_use_global_font": "false",
 "text_use_global_size": "false"
 }
@@ -61,7 +67,7 @@ scene = ExtResource("10_aodg4")
 
 [resource]
 script = ExtResource("11_8sjlb")
-name = "New_File"
+name = "Dialogue"
 layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
 layer_info = {
 "": SubResource("Resource_dhsfs"),
@@ -74,4 +80,4 @@ layer_info = {
 "16": SubResource("Resource_qat03"),
 "17": SubResource("Resource_2ukya")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "11"
