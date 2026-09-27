@@ -22,9 +22,14 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"mainChar": "res://characters/mainChar.dch"
+"Silem": "res://characters/Silem.dch",
+"cherail": "res://characters/cherail.dch",
+"kedu": "res://characters/kedu.dch",
+"mainChar": "res://characters/mainChar.dch",
+"mezjizia": "res://characters/mezjizia.dch"
 }
 directories/dtl_directory={
+"introScene": "res://timelines/introScene.dtl",
 "timeline": "res://timelines/timeline.dtl"
 }
 layout/style_directory={
@@ -32,7 +37,7 @@ layout/style_directory={
 "Dialogue": "res://styles/New_File.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://styles/New_File.tres"]
+layout/style_list=["res://styles/New_File.tres", ""]
 layout/default_style="res://styles/New_File.tres"
 variables={
 "PlayerName": "Astro"

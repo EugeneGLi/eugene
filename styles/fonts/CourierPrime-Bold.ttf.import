@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b55d683o878uy"
-path="res://.godot/imported/IBMPlexMono-Regular.ttf-df7b7169cc02d9eddbb7d8a217aa405e.fontdata"
+uid="uid://hh6331ffs8f"
+path="res://.godot/imported/CourierPrime-Bold.ttf-ac07e1e05e2494ffe1dce707af88ddcf.fontdata"
 
 [deps]
 
-source_file="res://styles/IBMPlexMono-Regular.ttf"
-dest_files=["res://.godot/imported/IBMPlexMono-Regular.ttf-df7b7169cc02d9eddbb7d8a217aa405e.fontdata"]
+source_file="res://styles/fonts/CourierPrime-Bold.ttf"
+dest_files=["res://.godot/imported/CourierPrime-Bold.ttf-ac07e1e05e2494ffe1dce707af88ddcf.fontdata"]
 
 [params]
 
