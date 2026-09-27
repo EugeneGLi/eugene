@@ -22,7 +22,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://characters/character.dch"
+"character": "res://characters/mc.dch"
 }
 directories/dtl_directory={
 "timeline": "res://timelines/timeline.dtl"

@@ -12,5 +12,6 @@ func _process(_time: float) -> void:
 		assert(stringName.match("DialogicLayout_Dialogue"))
 		NameLabelPanel = NameLabelPanel\
 		.get_child(3).get_child(1).find_child("NameLabelPanel")
-		NameLabelPanel.custom_minimum_size = Vector2(200,0)
+		NameLabelPanel.custom_minimum_size = \
+		Vector2(206,0)
 		Dinitialized = !Dinitialized
