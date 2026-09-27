@@ -37,7 +37,7 @@ layout/style_directory={
 "Dialogue": "res://styles/New_File.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://styles/New_File.tres", ""]
+layout/style_list=["res://styles/New_File.tres"]
 layout/default_style="res://styles/New_File.tres"
 variables={
 "PlayerName": "Astro"
