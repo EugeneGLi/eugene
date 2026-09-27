@@ -1,4 +1,4 @@
 [background arg="res://assets/testBackground.png" fade="0.0"]
-join character right
-character: PLEEEEASSEE LEMME SMOOCH THE HOT ALIENS lorem ipsum. lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlo hot aliens in your [color=#6dbecd][Redacted][/color] CLICK HERE[color=#6dbecd] Blue Text is inner thoughts.[/color]
-character: feddy fazberar
+join mainChar right
+mainChar: PLEEEEASSEE LEMME SMOOCH THE HOT ALIENS lorem ipsum. lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlo hot aliens in your [color=#6dbecd][Redacted][/color] CLICK HERE[color=#6dbecd] Blue Text is inner thoughts.[/color]
+mainChar: feddy fazberar
