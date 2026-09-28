@@ -1,4 +1,11 @@
-[style]
+[style name="FullScreen"]
 PLUTO SPACE STATION MAIN CONTROL CENTER | JULY 4TH, 1969\
 MONITORED BY THE UNITED STATES ORION ADMINISTRATION
-[text_input text="WHAT IS YOUR NAME" var="PlayerName"]
+[clear time="0.1" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+[text_input text="ENTER USERNAME" var="PlayerName" placeholder="[]" default="Astro"]
+AUTHORIZED PERSONNEL ONLY. CONDUCTING MANUAL OVERRIDE
+RUNNING...
+ERROR\: MANUAL OVERRIDE DENIED
+*metallic bangs*
+[style name="Dialogue"]
+mainChar: [color=#{Blue}]Stabilization modules off kilter, fuel sensors are all over the place. This place is going to fall apart any minute now![/color]

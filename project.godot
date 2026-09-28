@@ -34,12 +34,14 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://styles/New_File.tres",
-"Dialogue": "res://styles/New_File.tres"
+"Dialogue": "res://styles/New_File.tres",
+"FullScreen": "res://styles/FullScreen.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://styles/New_File.tres"]
+layout/style_list=["res://styles/New_File.tres", "res://styles/FullScreen.tres"]
 layout/default_style="res://styles/New_File.tres"
 variables={
+"Blue": "6dbecd",
 "PlayerName": "Astro"
 }
 text/letter_speed=0.01

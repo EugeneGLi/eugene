@@ -2,6 +2,17 @@
 
 [ext_resource type="Script" uid="uid://eicrue0pq7do" path="res://assets/scripts/start_screen.gd" id="1_o7i0r"]
 [ext_resource type="Texture2D" uid="uid://d12i3rjc0fxvj" path="res://assets/testBackground.png" id="2_he1sj"]
+[ext_resource type="Shader" uid="uid://beycjucwbiaky" path="res://styles/shaders/rctEffect.gdshader" id="3_he1sj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r2jwc"]
+shader = ExtResource("3_he1sj")
+shader_parameter/scale = 1.40000002086168
+shader_parameter/amplitude = 0.20000000298024
+shader_parameter/speed = 5.0
+shader_parameter/flicker_amount = 0.00999999977648
+shader_parameter/flicker_rate = 100.0
+shader_parameter/curvature = 6.0000000894072
+shader_parameter/vigniette_multiplier = 1.0
 
 [node name="Start Screen" type="Control" unique_id=2122742995]
 layout_mode = 3
@@ -43,5 +54,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 text = "Start"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1315799340]
+material = SubResource("ShaderMaterial_r2jwc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
