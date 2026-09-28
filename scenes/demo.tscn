@@ -4,14 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://kpqfyas3841l" path="res://icon.svg" id="2_ba4lm"]
 [ext_resource type="Shader" uid="uid://beycjucwbiaky" path="res://styles/shaders/rctEffect.gdshader" id="2_l20p6"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1qvk"]
-shader = ExtResource("2_l20p6")
-shader_parameter/scale = 2.0
-shader_parameter/amplitude = 0.20000000298024
-shader_parameter/speed = 2.0
-shader_parameter/flicker_amount = 0.00999999977648
-shader_parameter/flicker_rate = 50.0
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l20p6"]
 shader = ExtResource("2_l20p6")
 shader_parameter/scale = 1.40000002086168
@@ -19,15 +11,13 @@ shader_parameter/amplitude = 0.20000000298024
 shader_parameter/speed = 5.0
 shader_parameter/flicker_amount = 0.00999999977648
 shader_parameter/flicker_rate = 100.0
+shader_parameter/curvature = 6.0000000894072
 
 [node name="Main" type="Node2D" unique_id=881798130]
 script = ExtResource("1_tqfh0")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1334247326]
-visible = false
-material = SubResource("ShaderMaterial_e1qvk")
-position = Vector2(652, 341.00003)
-scale = Vector2(4.25, 3.046875)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1656932304]
+position = Vector2(511, 288)
 texture = ExtResource("2_ba4lm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1237427466]
