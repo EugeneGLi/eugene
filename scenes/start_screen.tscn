@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cv2yumlw0qpuv"]
+
+[ext_resource type="Script" uid="uid://eicrue0pq7do" path="res://assets/scripts/start_screen.gd" id="1_o7i0r"]
+[ext_resource type="Texture2D" uid="uid://d12i3rjc0fxvj" path="res://assets/testBackground.png" id="2_he1sj"]
+
+[node name="Start Screen" type="Control" unique_id=2122742995]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o7i0r")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2132641808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_he1sj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=371296073]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1004380846]
+layout_mode = 2
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 100
+text = "Swing Downtown"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=2023391322]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

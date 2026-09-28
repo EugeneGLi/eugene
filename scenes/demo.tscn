@@ -18,6 +18,7 @@ shader_parameter/vigniette_multiplier = 1.0
 script = ExtResource("1_tqfh0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1656932304]
+visible = false
 position = Vector2(511, 288)
 texture = ExtResource("2_ba4lm")
 
