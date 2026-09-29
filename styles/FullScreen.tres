@@ -21,6 +21,7 @@ overrides = {
 "box_color_custom": "Color(0, 1, 0, 1)",
 "box_color_use_global": "false",
 "box_margin_bottom": "0.0",
+"box_size": "Vector2(1900, 5000)",
 "normal_font": "\"res://styles/fonts/CourierPrime-Bold.ttf\"",
 "text_alignment": "1",
 "text_custom_color": "Color(0, 1, 0, 1)",
@@ -49,4 +50,4 @@ layer_info = {
 "11": SubResource("Resource_csqxf"),
 "12": SubResource("Resource_8d6tp")
 }
-metadata/_latest_layer = "11"
+metadata/_latest_layer = "10"

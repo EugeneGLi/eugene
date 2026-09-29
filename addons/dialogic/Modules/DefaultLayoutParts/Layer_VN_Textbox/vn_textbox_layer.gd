@@ -1,5 +1,6 @@
 @tool
 extends DialogicLayoutLayer
+class_name vn_textbox_layer
 ## This layer's scene file contains following nodes:
 ## - a dialog_text node
 ## - a name_label node
@@ -149,6 +150,7 @@ func _apply_export_overrides() -> void:
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
+	print("hello")
 	var dialog_text_panel: PanelContainer = %DialogTextPanel
 	if ResourceLoader.exists(box_panel):
 		dialog_text_panel.add_theme_stylebox_override(&'panel', load(box_panel) as StyleBox)
@@ -159,10 +161,12 @@ func _apply_box_settings() -> void:
 		dialog_text_panel.self_modulate = box_color_custom
 
 	var sizer: Control = %Sizer
-	sizer.size = box_size
+	setSizerSize(sizer,box_size);
 	sizer.position = box_size * Vector2(-0.5, -1)+Vector2(0, -box_margin_bottom)
 
-
+func setSizerSize(sizer: Control, boxSize : Vector2) -> void:
+	sizer.size = boxSize
+	return
 ## Applies box animations settings to the scene.
 func _apply_box_animations_settings() -> void:
 	var animations: AnimationPlayer = %Animations
