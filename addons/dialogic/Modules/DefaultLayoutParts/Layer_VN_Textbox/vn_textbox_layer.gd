@@ -1,6 +1,5 @@
 @tool
 extends DialogicLayoutLayer
-class_name vn_textbox_layer
 ## This layer's scene file contains following nodes:
 ## - a dialog_text node
 ## - a name_label node

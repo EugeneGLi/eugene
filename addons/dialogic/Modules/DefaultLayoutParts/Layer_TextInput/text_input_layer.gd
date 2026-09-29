@@ -4,6 +4,7 @@ extends DialogicLayoutLayer
 @export_group("Box")
 
 @export_subgroup("Size & Position")
+@export var box_size: Vector2 = Vector2(500,120)
 @export var box_margin_bottom: int = 0
 
 @export_subgroup("Panel")
@@ -38,4 +39,3 @@ func _apply_box_settings() -> void:
 		dialog_text_panel.self_modulate = get_global_setting(&'bg_color', box_color_custom)
 	
 	dialog_text_panel.self_modulate = box_color_custom
-	print(dialog_text_panel.self_modulate)
