@@ -490,6 +490,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = SubResource("GDScript_i31ic")
+box_panel = "res://styles/FullScreen/VisualNovelTextbox/vn_textbox_default_panel.tres"
+name_label_box_panel = "res://styles/FullScreen/VisualNovelTextbox/vn_textbox_name_label_panel.tres"
+name_label_box_modulate = Color(0, 0, 0, 1)
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=484362867]
 unique_name_in_owner = true

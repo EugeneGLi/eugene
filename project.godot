@@ -76,6 +76,9 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+history/simple_history_enabled=false
+history/full_history_enabled=true
+history/full_history_save=true
 
 [display]
 

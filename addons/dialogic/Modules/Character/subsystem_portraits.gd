@@ -28,9 +28,10 @@ func _clear_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> v
 	portraits.clear()
 	character_nodes.clear()
 
-
+##portraits is not filled before this is called
 func _load_state(_load_flag := LoadFlags.FULL_LOAD) -> void:
 	# Load Position Portraits
+
 	var portraits_info: Dictionary = portraits.duplicate()
 	portraits = {}
 	var portrait_states: Dictionary = get_extra_state().get("portrait_state", {})

@@ -34,3 +34,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1891492476]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

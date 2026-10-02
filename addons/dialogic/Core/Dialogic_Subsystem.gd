@@ -85,7 +85,7 @@ func pack_exported_state() -> Dictionary:
 	for i in self.script.get_script_property_list():
 		if i.usage & PROPERTY_USAGE_EDITOR == PROPERTY_USAGE_EDITOR:
 			info[i.name] = self.get(i.name)
-	return info
+	return info.duplicate_deep()
 
 
 ## Unpacks the values from the given info dictionary into the exported variables.
