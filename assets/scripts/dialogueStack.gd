@@ -25,12 +25,12 @@ func push(v):
 		return
 	newNode.next = head
 	head = newNode
-	++size
+	size+=1
 func pop():
 	if head == null: return null
 	var data = head.data
 	head = head.next
-	--size
+	size-=1
 	return data
 func peek():
 	return head.data
