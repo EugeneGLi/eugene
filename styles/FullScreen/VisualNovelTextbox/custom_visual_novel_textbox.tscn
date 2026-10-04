@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bklme8oymw6h7" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/autoadvance_indicator.gd" id="6_07xym"]
 [ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg" id="6_uch03"]
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
+[ext_resource type="Texture2D" uid="uid://mx5ubcvktc1o" path="res://assets/blackBox.png" id="9_ho3j3"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
 
 [sub_resource type="GDScript" id="GDScript_i31ic"]
@@ -542,6 +543,8 @@ metadata/_edit_layout_mode = 1
 
 [node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=115042752 node_paths=PackedStringArray("textbox_root")]
 unique_name_in_owner = true
+visibility_layer = 258
+z_index = 1
 custom_minimum_size = Vector2(0, 138)
 clip_contents = false
 layout_mode = 2
@@ -669,3 +672,13 @@ theme_override_font_sizes/font_size = 15
 text = "S"
 script = ExtResource("7_bi7sh")
 name_label_root = NodePath("..")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1825004847]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ho3j3")
