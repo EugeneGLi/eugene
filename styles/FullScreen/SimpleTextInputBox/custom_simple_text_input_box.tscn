@@ -16,24 +16,31 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_8xwp1"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4217o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r77v4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y4wrq"]
+
 [node name="TextInputLayer" type="Control" unique_id=823817792]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
+offset_bottom = 115.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_7ahrn")
-box_margin_bottom = null
-box_color_use_global = null
-box_color_custom = null
+box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/vn_textbox_default_panel.tres"
 
 [node name="DialogicNode_TextInput" type="Control" parent="." unique_id=970951876]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -47,9 +54,12 @@ metadata/_edit_layout_mode = 1
 unique_name_in_owner = true
 self_modulate = Color(0, 0, 0, 0.780392)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
+offset_top = -48.0
+offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3dpjm")
@@ -59,6 +69,7 @@ layout_mode = 2
 
 [node name="TextLabel" type="Label" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=468418187]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_8xwp1")
 text = "Please enter some text:"
@@ -66,8 +77,17 @@ autowrap_mode = 3
 
 [node name="InputField" type="LineEdit" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=144148452]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4217o")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_r77v4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y4wrq")
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.25
 
 [node name="ConfirmationButton" type="Button" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=4739179]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 text = "Confirm"

@@ -1,11 +1,44 @@
 [style name="FullScreen"]
-PLUTO SPACE STATION MAIN CONTROL CENTER | JULY 4TH, 1969\
-MONITORED BY THE UNITED STATES ORION ADMINISTRATION
-[clear time="0.1" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+[background arg="res://assets/backgrounds/spaceship_placeholder.webp" fade="0.0"]
+PLUTO SPACE STATION MAIN CONTROL CENTER | JULY 4TH, 1969
+MONITORED BY THE UNITED STATES ORION ADMINISTRATION.
+ENTER UNIT\:[p align=center]\
+{p}[speed=5]* * * * * * * * {p}*
+PLEASE ENTER USERNAME.
 [text_input text="ENTER USERNAME" var="PlayerName" placeholder="[]" default="Astro"]
-AUTHORIZED PERSONNEL ONLY. CONDUCTING MANUAL OVERRIDE
-RUNNING...
-ERROR\: MANUAL OVERRIDE DENIED
-*metallic bangs*
+AUTHORIZED PERSONNEL ONLY.[p align=center] CONDUCTING MANUAL OVERRIDE.
+RUNNING{p} . {p} . {p} .
+[color=red] ERROR\: MANUAL OVERRIDE DENIED[/color]
+[shake rate=20.0 level=5 connected=1][color=red] ERROR ERROR ERROR ERROR ERROR ERROR ERROR [/color][/shake]
+[clear time="0.75" background="false"]
 [style name="Dialogue"]
-mainChar: [color=#{Blue}]Stabilization modules off kilter, fuel sensors are all over the place. This place is going to fall apart any minute now![/color]
+[wait time="0.5" hide_text="false"]
+Narrator: {narr}A mettalic bang echoes through the spacecraft as the main computer fails. You, {PlayerName}, approach the panel and gives it a look over. It is clear that nothing is as it should be.
+mainChar: {Blue}Stabilization modules off kilter, fuel sensors are all over the place. This place is going to fall apart any minute now!
+Narrator: {narr}Stepping away from the console, you make their way to the command bridge, where the communication console is located, to contact Mission Control.
+Narrator: {narr}Making it to the command bridge, they pick up a headset and attempt to hail Mission Control on Earth.
+mainChar: Mission Control, this is IPSS-1, do you read me clear?\
+{Blue}God, I hope this works.
+mainChar: Mission Control, this is {PlayerName}. The station is approaching a state of unstable orbit. Permission to commence emergency protocol Delta November One Seven, and proceed to abandon the station, over.
+missionControl: [shake rate=100.0 level=15 connected=0] [speed=5]C-mme.. Pe..ssion.. t-.. Re-..t..
+mainChar: Mission Control, do you copy? Permission to abandon the station!
+missionControl: [shake rate=100.0 level=15 connected=0] [speed=5]M..ta-..e..ss..oc..-er.
+mainChar: Hello? Mission Control, do you copy?! ...Goddamnit.
+mainChar: {Blue}What the hell do I do now?! They didn’t give me a manual for the station pulling itself apart! Think, goddamnit!
+Narrator: {narr}The station shakes; the tension is palpable. Objects float around and collide with each other as the station starts to spin slightly. The station’s bright white lighting shuts off for a brief moment, then returns red and flashing. Alarms blare as the engine and ACS compartments struggle to maintain the station on course and level.
+Narrator: {narr}Wasting no time, {PlayerName} immediately suits up in the standard issue astronaut gear\: a white, baggy uniform with tubes and wires running along the surface, with little pomp and frills.\
+After donning the uniform, they stumble out of the command bridge and into a hallway.
+mainChar: {Blue}I’ve got to make it out of here, do something, something heroic, big, something to STOP THIS!
+Narrator: {narr}Much of the training given in the months leading up to launch have long rolled their way out of your skull; through the ear canal, past trapped words, out onto the floor of the launch pad - Incinerated forever.
+Narrator: {narr}Treading along the station, grasping at the walls with desperation, You lose control of your footing and tumble forward, landing on all fours amidst the chaos and noise.
+mainChar: {Blue}I am NOT going to die on this godforsaken hunk of metal. Haven’t even had the chance to meet anyon[fade start=4 length = 2]--
+Narrator: Before {PlayerName} can react, a rumble throws them forward, cutting off their thought. The station turns in the zero gravity environment, making being upright an achievement at the moment.
+mainChar: {Blue}*Pain noise* Feels like the stabilizers are out. Maybe I should’ve done that maintenance instead of
+Narrator: {narr}Looking around, you see the hall in front of them tearing apart. Looking around more, you notice the pod to your right open and leaps into it, grabbing the railing on the inside and spinning around. With considerable effort, you manage to pull the pod’s hatch shut, effectively creating a safe room.
+Narrator: {narr}The pod is barely large enough for one person, with drawers, shelves, and a smattering of floating debris. The only other interesting feature is the small, port side window, barely large enough to fit a child’s head in it, let alone an adult’s. your ginormous, neanderthal skull somehow allows a glimpse out of it.
+Narrator: {narr}Suddenly, a loud tearing noise cuts through everything else.
+mainChar: Another damn problem, can this get ANY worse!?
+Narrator: {narr}The segment of the station MC finds themself in is in the process of removing itself from the center of the rest of the station, effectively turning what used to be one whole station into three, less useful pieces. Or as some would say, from a station into sta-tio-ns.
+[clear time="0.0" step="false"]
+# (cut to black as transition)
+jump timeline/

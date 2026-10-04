@@ -15,6 +15,9 @@
 [sub_resource type="Resource" id="Resource_dhsfs"]
 script = ExtResource("2_s8tse")
 scene = ExtResource("1_tmqj8")
+overrides = {
+"global_font": "\"res://styles/fonts/BodyDialogueFont.tres\""
+}
 
 [sub_resource type="Resource" id="Resource_phpkp"]
 script = ExtResource("2_s8tse")
@@ -36,6 +39,7 @@ overrides = {
 "box_color_use_global": "false",
 "box_panel": "\"res://styles/dialogueBoxBody.tres\"",
 "box_size": "Vector2(1000, 200)",
+"italics_font": "\"res://styles/fonts/IBMPlexMono-Italic.ttf\"",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
 "name_label_box_offset": "Vector2(-41, -20)",
 "name_label_box_panel": "\"res://styles/NameBox.tres\"",

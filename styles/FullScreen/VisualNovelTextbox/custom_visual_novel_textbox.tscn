@@ -157,10 +157,9 @@ func _apply_export_overrides() -> void:
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
-	print(\"hello\")
 	var dialog_text_panel: PanelContainer = %DialogTextPanel
-	if ResourceLoader.exists(box_panel):
-		dialog_text_panel.add_theme_stylebox_override(&'panel', load(box_panel) as StyleBox)
+	#if ResourceLoader.exists(box_panel):
+		#dialog_text_panel.add_theme_stylebox_override(&'panel', load(box_panel) as StyleBox)
 
 	if box_color_use_global:
 		dialog_text_panel.self_modulate = get_global_setting(&'bg_color', box_color_custom)
@@ -531,7 +530,7 @@ mouse_filter = 2
 
 [node name="DialogTextPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer" unique_id=705902932]
 unique_name_in_owner = true
-self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
+self_modulate = Color(0.007843138, 0.007843138, 0.007843138, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -543,18 +542,78 @@ metadata/_edit_layout_mode = 1
 
 [node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=115042752 node_paths=PackedStringArray("textbox_root")]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 138)
+clip_contents = false
 layout_mode = 2
 mouse_filter = 1
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 15
-theme_override_font_sizes/bold_font_size = 15
-theme_override_font_sizes/bold_italics_font_size = 15
-theme_override_font_sizes/italics_font_size = 15
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.20228064, -0.0050167926, 0.01989822, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.25)
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 1
 script = ExtResource("3_4634k")
+alignment = 1
 textbox_root = NodePath("..")
+bbcode = "Error"
+effects = 2
+alignment = 1
+color = Color(1, 0, 0, 1)
+emoji_scale = 1.0
+font = ""
+font_auto_setup = true
+font_size = 16
+font_bold_weight = 1.5
+font_italics_slant = 0.25
+font_italics_weight = -0.25
+shadow_enabled = true
+shadow_offset = 0.25
+shadow_alpha = 0.25
+shadow_outline_size = 0.1
+outline_size = 0
+outline_mode = 1
+outline_adjust = 0.8
+outline_hue_adjust = 0.0125
+nicer_quotes_enabled = true
+nicer_quotes_format = "“%s”"
+markdown_enabled = true
+markdown_format_bold = "[b]%s[]"
+markdown_format_italics = "[i]%s[]"
+markdown_format_bold_italics = "[bi]%s[]"
+markdown_format_highlight = "[green;sin]%s[]"
+markdown_format_bold2 = "[b]*%s*[]"
+markdown_format_italics2 = "[i;gray]*%s*[]"
+markdown_format_bold_italics2 = "%s"
+context_enabled = true
+context_path = NodePath("/root/State")
+context_state = {}
+context_rich_objects = true
+context_rich_ints = true
+context_rich_array = true
+autostyle_numbers = true
+autostyle_numbers_tag = "[salmon]%s[]"
+autostyle_numbers_pad_decimals = true
+autostyle_numbers_decimals = 2
+autostyle_emojis = true
+effect_weight = 1.0
+image_path = "res://"
+image_resize_to_font_size = true
+image_scale = 1.0
+meta_auto_https = true
+meta_cursor = 2
+override_bbcodeEnabled = true
+override_clipContents = false
+override_fitContent = true
 
 [node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText" unique_id=1463202297]
 unique_name_in_owner = true

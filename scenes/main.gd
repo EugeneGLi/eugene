@@ -5,7 +5,7 @@ var nameInitialize = false
 var dialogic: Node
 var history: DialogueStack = DialogueStack.new()
 func _ready() -> void:
-	dialogic = Dialogic.start("timeline")
+	dialogic = Dialogic.start("introScene")
 
 func _input(event: InputEvent) -> void:
 	##saves the current state of Dialogic to a stack of saved states

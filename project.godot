@@ -22,11 +22,13 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"Narrator": "res://characters/Narrator.dch",
 "Silem": "res://characters/Silem.dch",
 "cherail": "res://characters/cherail.dch",
 "kedu": "res://characters/kedu.dch",
 "mainChar": "res://characters/mainChar.dch",
-"mezjizia": "res://characters/mezjizia.dch"
+"mezjizia": "res://characters/mezjizia.dch",
+"missionControl": "res://characters/other/missionControl.dch"
 }
 directories/dtl_directory={
 "introScene": "res://timelines/introScene.dtl",
@@ -41,8 +43,10 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://styles/New_File.tres", "res://styles/FullScreen.tres"]
 layout/default_style="res://styles/New_File.tres"
 variables={
-"Blue": "6dbecd",
-"PlayerName": "Astro"
+"Blue": "[color=#6dbecd]",
+"PlayerName": "Astro",
+"narr": "[i][color=gray]",
+"p": "[pause=0.5!]"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -61,7 +65,9 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
-text/autopauses={}
+text/autopauses={
+"\"...\"": 0.1
+}
 audio/channel_defaults={
 "": {
 "audio_bus": "",
@@ -77,8 +83,9 @@ audio/channel_defaults={
 }
 }
 history/simple_history_enabled=false
-history/full_history_enabled=true
-history/full_history_save=true
+history/full_history_enabled=false
+history/full_history_save=false
+text/absolute_autopauses=false
 
 [display]
 
@@ -91,7 +98,7 @@ project/assembly_name="SwingDowntown"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/richtext2/plugin.cfg")
 
 [input]
 
@@ -112,3 +119,13 @@ dialogic_default_action={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[richer_text_label]
+
+fonts={
+&"CourierPrime": "res://styles/fonts/CourierPrime-Bold.ttf",
+&"IBMPlexMono": "res://styles/fonts/IBMPlexMono-Regular.ttf",
+&"Roboto": "res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf"
+}
+user_effects_dir="res://assets/text_effects"
+colors={}
