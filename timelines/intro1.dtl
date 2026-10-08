@@ -1,0 +1,4 @@
+# On Mars now
+[background arg="res://assets/backgrounds/Mars.png" fade="0.0"]
+[style name="Dialogue"]
+Narrator: We on Mars now.

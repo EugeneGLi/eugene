@@ -31,6 +31,7 @@ directories/dch_directory={
 "missionControl": "res://characters/other/missionControl.dch"
 }
 directories/dtl_directory={
+"intro1": "res://timelines/intro1.dtl",
 "introScene": "res://timelines/introScene.dtl",
 "timeline": "res://timelines/timeline.dtl"
 }

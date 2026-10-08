@@ -41,4 +41,4 @@ mainChar: Another damn problem, can this get ANY worse!?
 Narrator: {narr}The segment of the station MC finds themself in is in the process of removing itself from the center of the rest of the station, effectively turning what used to be one whole station into three, less useful pieces. Or as some would say, from a station into sta-tio-ns.
 [clear time="0.0" step="false"]
 # (cut to black as transition)
-jump timeline/
+jump intro1/
