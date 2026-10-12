@@ -31,6 +31,7 @@ directories/dch_directory={
 "missionControl": "res://characters/other/missionControl.dch"
 }
 directories/dtl_directory={
+"insideTheBar": "res://timelines/insideTheBar.dtl",
 "intro1": "res://timelines/intro1.dtl",
 "introScene": "res://timelines/introScene.dtl",
 "timeline": "res://timelines/timeline.dtl"
@@ -46,6 +47,7 @@ layout/default_style="res://styles/New_File.tres"
 variables={
 "Blue": "[color=#6dbecd]",
 "PlayerName": "Astro",
+"Silem": "???",
 "narr": "[i][color=gray]",
 "p": "[pause=0.5!]"
 }

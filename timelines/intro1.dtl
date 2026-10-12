@@ -1,4 +1,18 @@
 # On Mars now
 [background arg="res://assets/backgrounds/Mars.png" fade="0.0"]
 [style name="Dialogue"]
-Narrator: We on Mars now.
+Narrator: The makeshift escape pod heats up as it plummets to the ground faster and faster. Sweat drips from the outside of MC’s helmet, their grip tightening with the speed increasing.
+Narrator: Looking outside the window in pursuit of some grandiose, life-ending comforting sight, you see the beautiful Martian landscape, as well as the remnants of the station coming apart.
+mainChar: {Blue} At least the view is nice, however short the time I get to enjoy it is.
+# (Art shows objects floating, then transition to flying around randomly)
+Narrator: Suddenly, the pod starts spinning, throwing everything inside around at random. Tools, freeze dried food, and various other items fly around as MC holds on. Lasting only for a few moments, the pod stabilizes upon entering orbit.
+mainChar: {Blue} I feel, SO nauseous right now.\
+\
+*gurgle/retch*\
+\
+Oh god hold it in hold it in hold it in
+Narrator: Managing to keep that bit of space sick out of your helmet, a little breath of relief comes out of your pursed lips.\
+The relief is short lived.\
+As the pod plummets through the Martian sky, MC can’t help but wonder…
+mainChar: How miserable has this trip been?
+# (CUT TO BLACK)
