@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b22o6rt5prij1" path="res://trajectory.gd" id="4_032u1"]
 [ext_resource type="Script" uid="uid://nwmfdnvhwwcb" path="res://ryhthm_manager.gd" id="6_plv5i"]
 [ext_resource type="Script" uid="uid://ce1ln82dj8rea" path="res://ScoreManager.gd" id="6_raoff"]
+[ext_resource type="Script" uid="uid://tfp6le4lftgq" path="res://tiles.gd" id="6_w12gl"]
 [ext_resource type="Script" uid="uid://r5hsac4tu20q" path="res://score.gd" id="7_50gfg"]
 [ext_resource type="Script" uid="uid://cnydytq1o5lnc" path="res://yummy.gd" id="8_50gfg"]
 
@@ -50,6 +51,7 @@ scale = Vector2(1.3199954, 0.19606389)
 [node name="Ground4" parent="." unique_id=1840041804 instance=ExtResource("3_3k1jv")]
 position = Vector2(-216, -164)
 scale = Vector2(1.3199954, 0.19606389)
+script = ExtResource("6_w12gl")
 
 [node name="ScoreManager" type="Node" parent="." unique_id=1012783815]
 script = ExtResource("6_raoff")
