@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SwingDowntown"
-run/main_scene="uid://e7dr4d8iub53"
+run/main_scene="uid://cv2yumlw0qpuv"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,19 +22,36 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://characters/character.dch"
+"Narrator": "res://characters/Narrator.dch",
+"Silem": "res://characters/Silem.dch",
+"cherail": "res://characters/cherail.dch",
+"kedu": "res://characters/kedu.dch",
+"mainChar": "res://characters/mainChar.dch",
+"mezjizia": "res://characters/mezjizia.dch",
+"missionControl": "res://characters/other/missionControl.dch"
 }
 directories/dtl_directory={
+"guide to timelines": "res://timelines/guide to timelines.dtl",
+"insideTheBar": "res://timelines/insideTheBar.dtl",
+"intro1": "res://timelines/intro1.dtl",
+"introScene": "res://timelines/introScene.dtl",
 "timeline": "res://timelines/timeline.dtl"
 }
 layout/style_directory={
 "": "res://styles/New_File.tres",
-"Dialogue": "res://styles/New_File.tres"
+"Dialogue": "res://styles/New_File.tres",
+"FullScreen": "res://styles/FullScreen.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://styles/New_File.tres"]
+layout/style_list=["res://styles/New_File.tres", "res://styles/FullScreen.tres"]
 layout/default_style="res://styles/New_File.tres"
-variables={}
+variables={
+"Blue": "[color=#6dbecd]",
+"PlayerName": "Astro",
+"Silem": "???",
+"narr": "[i][color=gray]",
+"p": "[pause=0.5!]"
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -52,7 +69,9 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
-text/autopauses={}
+text/autopauses={
+"\"...\"": 0.1
+}
 audio/channel_defaults={
 "": {
 "audio_bus": "",
@@ -67,6 +86,10 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+history/simple_history_enabled=false
+history/full_history_enabled=false
+history/full_history_save=false
+text/absolute_autopauses=false
 
 [display]
 
@@ -79,7 +102,7 @@ project/assembly_name="SwingDowntown"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/richtext2/plugin.cfg")
 
 [input]
 
@@ -100,3 +123,13 @@ dialogic_default_action={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[richer_text_label]
+
+fonts={
+&"CourierPrime": "res://styles/fonts/CourierPrime-Bold.ttf",
+&"IBMPlexMono": "res://styles/fonts/IBMPlexMono-Regular.ttf",
+&"Roboto": "res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf"
+}
+user_effects_dir="res://assets/text_effects"
+colors={}

@@ -1,4 +1,19 @@
+[style name="Dialogue"]
 [background arg="res://assets/testBackground.png" fade="0.0"]
-join character right
-character: PLEEEEASSEE LEMME SMOOCH THE HOT ALIENS lorem ipsum. lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlo hot aliens in your [Redacted] CLICK HERE Blue Text is inner thoughts.
-character: feddy fazberar
+join mainChar right
+mainChar: PLEEEEASSEE LEMME SMOOCH THE HOT ALIENS lorem ipsum. lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlo hot aliens in your [color=#{Blue}][Redacted][/color] CLICK HERE[color=#{Blue}] Blue Text is inner thoughts.[/color]
+mainChar: feddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberarfeddy fazberar
+join Silem left [animation="Slide From Left" wait="true" mirrored="true"]
+Silem: Hello Astronaut from Earth you are hot and cool ily\
+<3 have you seen my 500 cigarettes
+leave Silem [animation="Zoom Out" wait="true"]
+join mezjizia left
+mezjizia: hi hello
+leave mainChar
+join kedu right
+kedu: Play Swing Downtown
+leave kedu
+leave mezjizia
+[wait time="1.0"]
+join cherail center
+cherail: Boo! No Art of me yet, still in the concept phase!

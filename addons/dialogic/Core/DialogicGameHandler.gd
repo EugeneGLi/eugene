@@ -415,7 +415,6 @@ func load_full_state(state:DialogicSaveState) -> void:
 	if state == null:
 		printerr("[Dialogic] Attempted to load state, but given state was [null].")
 		return
-
 	for subsystem in get_children():
 		if subsystem.name in state.subsystems:
 			subsystem.unpack_state(state.subsystems[subsystem.name])

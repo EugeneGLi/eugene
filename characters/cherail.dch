@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(1, 1, 1, 1),
+&"color": Color(0.9635417, 0.9557004, 0.46169707, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -12,14 +12,14 @@
 },
 &"default_portrait": "Neutral",
 &"description": "",
-&"display_name": "Johnny AstroNaut",
+&"display_name": "Cherail",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "Neutral": {
 "export_overrides": {
-"image": "\"res://characters/Sprites/test.png\""
+"image": "\"res://characters/Sprites/mushrrom placeholder.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

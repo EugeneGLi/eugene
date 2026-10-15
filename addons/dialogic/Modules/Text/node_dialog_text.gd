@@ -1,7 +1,7 @@
 @tool
 @icon("node_dialog_text_icon.svg")
 class_name DialogicNode_DialogText
-extends RichTextLabel
+extends RicherTextLabel
 
 ## Dialogic node that can reveal text at a given (changeable speed).
 
@@ -55,7 +55,7 @@ func _ready() -> void:
 	var custom_bbcode_effects: Array = ProjectSettings.get_setting("dialogic/text/custom_bbcode_effects", "").split(",", false)
 	for i in custom_bbcode_effects:
 		var x: Resource = load(i.strip_edges())
-		if x is RichTextEffect:
+		if x is RichTextEffectBase:
 			custom_effects.append(x.duplicate())
 
 
