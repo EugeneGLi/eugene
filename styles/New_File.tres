@@ -45,7 +45,7 @@ overrides = {
 "box_color_use_global": "false",
 "box_margin_bottom": "35.0",
 "box_panel": "\"res://styles/dialogueBoxBody.tres\"",
-"box_size": "Vector2(1000, 200)",
+"box_size": "Vector2(1000, 188)",
 "italics_font": "\"res://styles/fonts/IBMPlexMono-Italic.ttf\"",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
 "name_label_box_offset": "Vector2(-41, -20)",

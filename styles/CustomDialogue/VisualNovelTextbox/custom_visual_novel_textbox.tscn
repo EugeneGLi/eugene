@@ -214,12 +214,7 @@ box_panel = "res://styles/CustomDialogue/VisualNovelTextbox/vn_textbox_default_p
 box_size = Vector2(550, 150)
 name_label_box_panel = "res://styles/CustomDialogue/VisualNovelTextbox/vn_textbox_name_label_panel.tres"
 name_label_box_modulate = Color(0, 0, 0, 1)
-actions_is_active = null
-actions_color_use_global = null
-actions_color_custom = null
-action_box_size = null
-action_box_position = null
-use_main_animation = null
+actions_sub_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres"
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=1985040569]
 unique_name_in_owner = true
@@ -406,7 +401,59 @@ self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
 layout_mode = 0
 offset_left = 124.0
 offset_top = 21.0
-offset_right = 299.0
-offset_bottom = 50.0
+offset_right = 643.0
+offset_bottom = 52.0
 mouse_filter = 2
 metadata/_edit_layout_mode = 1
+
+[node name="ButtonGrid" type="GridContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer" unique_id=2039274133]
+unique_name_in_owner = true
+propagate_maximum_size = false
+layout_mode = 2
+columns = 9
+
+[node name="BackButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=900841537]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Back"
+
+[node name="QuickSaveButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=2114111228]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Q. Save"
+
+[node name="QuickLoadButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=182119613]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Q. Load"
+
+[node name="Auto" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=1744994471]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Auto"
+
+[node name="SaveButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=929425735]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=351211744]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load"
+
+[node name="HistoryButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=860635691]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "History"
+
+[node name="SettingsButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=1777856577]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="SkipButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=151815845]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Skip"

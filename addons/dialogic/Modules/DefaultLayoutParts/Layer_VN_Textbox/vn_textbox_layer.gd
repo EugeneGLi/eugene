@@ -180,6 +180,14 @@ func _apply_action_settings() -> void:
 	
 	actions_panel.size = action_box_size
 	actions_panel.position = action_box_position
+	
+	var button_grid: GridContainer = %ButtonGrid
+	
+	var allActions: Array[Node] = button_grid.get_children()
+	
+	var button_test: Button = %BackButton
+	
+	
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
