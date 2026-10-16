@@ -115,6 +115,24 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export_range(0.0, 10) var typing_sounds_volume_variance: float = 0.0
 @export var typing_sounds_ignore_characters: String = " .,!?"
 
+@export_group("Actions")
+
+@export_subgroup("Panel")
+@export var actions_is_active: bool = false; 
+@export_file("*.tres") var actions_sub_panel: String = this_folder.path_join("vn_textbox_default_panel.tres")
+
+@export_subgroup("Color")
+@export var actions_color_use_global: bool = true
+@export var actions_color_custom: Color = Color.BLACK
+
+@export_subgroup("Size & Position")
+@export var action_box_size: Vector2 = Vector2(550, 110)
+@export var action_box_position: Vector2 = Vector2(100,100)
+
+@export_subgroup("Animation")
+@export var use_main_animation: bool = true; 
+
+
 
 func _apply_export_overrides() -> void:
 	if !is_inside_tree():
@@ -144,12 +162,27 @@ func _apply_export_overrides() -> void:
 
 	## TYPING SOUNDS
 	_apply_sounds_settings()
+	
+	##ACTIONS SUBPANEL
+	if actions_is_active:
+		_apply_action_settings()
 
-
+##Applies all actions subpanel settings to the scene.
+##Buttons are togglable.
+func _apply_action_settings() -> void:
+	var actions_panel: PanelContainer = %ButtonContainer;
+	if ResourceLoader.exists(actions_sub_panel):
+		actions_panel.add_theme_stylebox_override(&'panel', load(actions_sub_panel) as StyleBox)
+	if actions_color_use_global:
+		actions_panel.self_modulate = get_global_setting(&'bg_color', actions_color_custom)
+	else:
+		actions_panel.self_modulate = actions_color_custom
+	
+	actions_panel.size = action_box_size
+	actions_panel.position = action_box_position
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
-	print("hello")
 	var dialog_text_panel: PanelContainer = %DialogTextPanel
 	if ResourceLoader.exists(box_panel):
 		dialog_text_panel.add_theme_stylebox_override(&'panel', load(box_panel) as StyleBox)
