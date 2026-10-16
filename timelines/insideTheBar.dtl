@@ -3,6 +3,7 @@
 mainChar: {Blue} I shamble along the dusty walkway and up to the building’s door. It’s well-worn, yet elaborately carved. Warm, crimson light shines through the tinted glass at the top of the door. With no other sign of hospitality in sight, I let my exhaustion drag me through the entranceway…
 mainChar: …Woah.
 [background arg="res://assets/backgrounds/bar_gibberish.png" fade="1.0"]
+do ScoreManager.set_demo_music("res://music/lounge.ogg")
 mainChar: {Blue}I couldn’t help myself from being stunned. The establishment was lit in moody oranges and yellows, and draped in curtains made of a fine, velvety cloth. If it weren’t for the alien signage scattered about the building, you could easily mistake this for a swanky bar back on Earth.
 mainChar: {Blue}Before I can get too distracted, I bring my eyes to the bar counter and…
 join Silem center [animation="Slide From Right" length="0.6" wait="true"]

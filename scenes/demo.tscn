@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://biukd1viex52g" path="res://scenes/main.gd" id="1_tqfh0"]
 [ext_resource type="Texture2D" uid="uid://kpqfyas3841l" path="res://icon.svg" id="2_ba4lm"]
 [ext_resource type="Shader" uid="uid://beycjucwbiaky" path="res://styles/shaders/rctEffect.gdshader" id="2_l20p6"]
+[ext_resource type="AudioStream" uid="uid://byipk7r8pn0wl" path="res://music/spaceship_interior.ogg" id="4_vephn"]
+[ext_resource type="Script" uid="uid://cpcrt6wppnbgx" path="res://demo_music.gd" id="5_b0nem"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l20p6"]
 shader = ExtResource("2_l20p6")
@@ -40,3 +42,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=114965557]
+stream = ExtResource("4_vephn")
+script = ExtResource("5_b0nem")

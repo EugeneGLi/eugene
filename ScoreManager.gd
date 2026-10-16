@@ -3,6 +3,7 @@ signal score_changed(new_score)
 
 var score: int = 0
 var next_timeline_name: String
+var demo_music: String
 
 func add_score(amount: int) -> void:
 	score += amount
@@ -24,6 +25,9 @@ func jump_to_cutscene() -> void:
 
 func get_score() -> int:
 	return score
+
+func set_demo_music(name: String) -> void:
+	demo_music = name
 
 func reset_swing_downtown() -> void:
 	get_tree().change_scene_to_file("res://scenes/start_screen.tscn")

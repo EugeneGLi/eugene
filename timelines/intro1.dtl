@@ -1,4 +1,5 @@
 # On Mars now
+do ScoreManager.set_demo_music("res://music/mars.ogg")
 [background arg="res://assets/backgrounds/mars_landscape.png" fade="0.0"]
 [style name="Dialogue"]
 Narrator: The makeshift escape pod heats up as it plummets to the ground faster and faster. Sweat drips from the outside of MC’s helmet, their grip tightening with the speed increasing.
