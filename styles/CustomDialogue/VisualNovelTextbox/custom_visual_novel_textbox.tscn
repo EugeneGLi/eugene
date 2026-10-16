@@ -406,11 +406,12 @@ offset_bottom = 52.0
 mouse_filter = 2
 metadata/_edit_layout_mode = 1
 
-[node name="ButtonGrid" type="GridContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer" unique_id=2039274133]
+[node name="ButtonGrid" type="HBoxContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer" unique_id=1422957288]
 unique_name_in_owner = true
 propagate_maximum_size = false
 layout_mode = 2
-columns = 9
+theme_override_constants/separation = 40
+alignment = 1
 
 [node name="BackButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/ButtonGrid" unique_id=900841537]
 unique_name_in_owner = true
