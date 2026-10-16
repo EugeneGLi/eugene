@@ -1,0 +1,47 @@
+[style]
+[background arg="res://assets/backgrounds/outsidethecity.webp" fade="0.0"]
+mainChar: {Blue} I shamble along the dusty walkway and up to the building’s door. It’s well-worn, yet elaborately carved. Warm, crimson light shines through the tinted glass at the top of the door. With no other sign of hospitality in sight, I let my exhaustion drag me through the entranceway…
+mainChar: …Woah.
+[background arg="res://assets/testBackground.png" fade="1.0"]
+mainChar: {Blue}I couldn’t help myself from being stunned. The establishment was lit in moody oranges and yellows, and draped in curtains made of a fine, velvety cloth. If it weren’t for the alien signage scattered about the building, you could easily mistake this for a swanky bar back on Earth.
+mainChar: {Blue}Before I can get too distracted, I bring my eyes to the bar counter and…
+join Silem center
+mainChar: {Blue}Is that a… goat?
+Narrator: {narr}The goat man cracks his third and four arm’s knuckles behind his back.
+mainChar: What {p}\
+the {p}\
+actual {p} \
+hell. {p}
+mainChar: I’m in hell. This is hell. I am dead and this is hell.
+Silem: {narr}The goat man bahhs in an indecipherable gibberish.
+mainChar: {Blue}My God. The Devil is real and is making me sit down in front of him. What the hell, what the hell, what the hell…
+Silem: {narr} (Slightly confused gibberish continues to come from the goat man)
+mainChar: {Blue}He points to the barstool directly in front of him with both of his right hands, beckoning me... Knowing I shouldn’t tempt fate, I begrudgingly make my way to his seat of choice and sit down.
+mainChar: Oh God. What have I done? Am I here to be judged for my sins? Is my soul damned?
+Narrator: The ... beast in front of me grunts in confusion, his goat-like eyes prove nauseating to gaze into. Ash from his cigarettes falls to the counter. The scent is almost comforting. Familiar.
+Narrator: His tone is flat, almost annoyed; The same type of inflection a fry cook working a double would have dealing with an ass at the register back home. But, this isn’t back home, is it?
+mainChar: I should’ve known when I saw that red dirt and that red sky and those red buildings outside that this is hell… There’s no way I could’ve survived a crash landing like that, right? I gotta be here because man shouldn’t have left the land of God, right?!
+mainChar: Do you understand me? Please, I didn’t... I didn’t do anything wrong..! Am I damned for eternal torment?! I’d go back home and repent to my pastor if I could, but I just got stranded here… You gotta understand…! Please!
+Narrator: He puts out one of his cigarettes, turns his back towards me, and starts grabbing bottles off the shelf. Seemingly second nature to him at this point, he turns back around with a concoction of drinks.
+mainChar: Why are you ignoring me? W-What did I do? Is it not Christianity? I’ll convert if it saves me man, just say something!
+Narrator: He suddenly whips around, pouring small portions of multicolored, translucent liquids into the glass he had been cleaning earlier.
+Narrator: As he pours, he pulls out a carton of small, ovoid objects with his top right hand and plucks one out with his bottom left. Then, with such a casual demeanor to him, he sets the glass of liquids down and cracks open an...egg?
+Narrator: Its viscous, violet innards slowly drop into the cup. Upon impact, the rose-tinted contents bubble and froth into a murky, wine-colored liquid.
+mainChar: What are you...	You want me to... drink that? What is it?
+Narrator: One of his many arms gestures as he slides the cup forward, the liquid rippling like pulsating meat as he does.
+mainChar: Hey! The hell’s in it?! I-I’m not drinking that! Please, just tell me what’s going on!
+Narrator: Staring at my suit, he sucks his teeth. Reaching under the counter, he tosses a strange tube on top of the counter and quickly affixes it to the drinking valve on my suit before I could even respond.
+Narrator: To my dismay, he pours the thick liquid into his end of the tube. The smell is immediate and overwhelming, striking my nose with a perfumey earthiness akin to incense and myrrh. I see the purple liquid slowly crawl its way up the drinking tube.
+Narrator: For some reason I can’t quite place — maybe the overwhelming thirst I’ve felt since landing, or the fate of eternal punishment — I feel inclined to listen to him. I set my mouth over the valve… And…
+# You drink the drink, wow, liquid covers the screnn!!!!!!
+mainChar: Jesus. That’s... Woah.
+Narrator: The cocktail makes its way down the hatch, through the piping, all the way to the processing plant, where the reception is... oddly welcoming to this foreign agent.
+Silem: That’s that Rosetta. Strong stuff, ain’t it?
+Silem: Figured that’s what the issue was. Couldn’t understand me, could ya? It’s a neat lil’ cocktail I invented ages ago. Makes servin’ people from across the whole System a cinch.
+Narrator: His voice has a raspy huskiness to it far too human for his appearance... What exactly am I looking at?
+mainChar: [Cough] What are you? What is this?
+Narrator: He juts his jaw toward the sign behind him, somehow now perfectly legible English\: “Swing Downtown.”
+Silem: Name’s Silem, by the bye.
+set {Silem} = "Silem"
+mainChar: …{PlayerName}. My name is {PlayerName}. How... How do I get home?
+Silem: {PlayerName}. Hm. Where ya from?
