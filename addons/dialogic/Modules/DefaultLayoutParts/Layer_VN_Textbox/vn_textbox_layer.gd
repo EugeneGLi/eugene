@@ -132,6 +132,9 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export_subgroup("Animation")
 @export var use_main_animation: bool = true; 
 
+@export_subgroup("Buttons")
+@export var button_seperation: int = 33;
+
 
 
 func _apply_export_overrides() -> void:
@@ -181,7 +184,8 @@ func _apply_action_settings() -> void:
 	actions_panel.size = action_box_size
 	actions_panel.position = action_box_position
 	
-	#var button_grid: GridContainer = %ButtonGrid
+	var button_grid: HBoxContainer = %ButtonGrid
+	button_grid.add_theme_constant_override("separation",button_seperation)
 	
 	#var allActions: Array[Node] = button_grid.get_children()
 	
