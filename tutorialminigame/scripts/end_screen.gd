@@ -9,14 +9,13 @@ func _process(delta: float) -> void:
 	if Global.game_state != 0:
 		main_hud.visible = false
 		visible = true
-		
-		var display_score = min(Global.score, 999999)
-		end_score.text = "Score: " + str(display_score).pad_zeros(6)
-		
+
+		end_score.text = "Score: %d/%d" % [Global.score, Global.MAX_SCORE]
+
 		if Global.game_state == 1:
 			win_lose.text = "You Win!"
 		else:
-			win_lose.text = "You Suck!"
+			win_lose.text = "Too Bad..."
 	else:
 		main_hud.visible = true
 		visible = false

@@ -1,5 +1,5 @@
 # On Mars now
-[background arg="res://assets/backgrounds/Mars.png" fade="0.0"]
+[background arg="res://assets/backgrounds/mars_landscape.png" fade="0.0"]
 [style name="Dialogue"]
 Narrator: The makeshift escape pod heats up as it plummets to the ground faster and faster. Sweat drips from the outside of MC’s helmet, their grip tightening with the speed increasing.
 Narrator: Looking outside the window in pursuit of some grandiose, life-ending comforting sight, you see the beautiful Martian landscape, as well as the remnants of the station coming apart.

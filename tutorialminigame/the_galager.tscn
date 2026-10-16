@@ -5,18 +5,27 @@
 [ext_resource type="Script" uid="uid://4jlyxe6nwnqu" path="res://tutorialminigame/scripts/player.gd" id="3_l42s3"]
 [ext_resource type="PackedScene" uid="uid://hv3qkulutq38" path="res://tutorialminigame/prefabs/bullet.tscn" id="4_4078a"]
 [ext_resource type="Script" uid="uid://lle4eiluop57" path="res://tutorialminigame/scripts/score.gd" id="5_1mqgv"]
+[ext_resource type="Theme" uid="uid://7dsakvyosert" path="res://themes/minigame_ui.tres" id="6_ha538"]
 [ext_resource type="Script" uid="uid://bdxi1ev7pdj1g" path="res://tutorialminigame/scripts/time.gd" id="6_j5dnx"]
+[ext_resource type="Script" uid="uid://3yrx5melkjss" path="res://tutorialminigame/score_glass.gd" id="6_ta8b3"]
 [ext_resource type="Script" uid="uid://ddrrlyy1wepn" path="res://tutorialminigame/scripts/end_screen.gd" id="7_p5gre"]
+[ext_resource type="Texture2D" uid="uid://dty636e0f258o" path="res://assets/ui/tutorialminigame/timer_full.png" id="7_tnaji"]
+[ext_resource type="Texture2D" uid="uid://cou7qbra7h7a8" path="res://assets/ui/tutorialminigame/score1.png" id="7_w2awb"]
+[ext_resource type="Texture2D" uid="uid://bw7t1amq2rwc8" path="res://assets/ui/tutorialminigame/score2.png" id="8_7u51v"]
 [ext_resource type="Script" uid="uid://dxwuc6yd4n4nj" path="res://tutorialminigame/scripts/retry.gd" id="8_b27qj"]
+[ext_resource type="Texture2D" uid="uid://b7fv5mdcfcmen" path="res://assets/ui/tutorialminigame/score0.png" id="8_ha538"]
+[ext_resource type="Texture2D" uid="uid://dvroqjmlf2oq3" path="res://assets/ui/tutorialminigame/score3.png" id="9_xj4np"]
+[ext_resource type="Texture2D" uid="uid://iod4kr4keogw" path="res://assets/ui/tutorialminigame/score4.png" id="10_76vtg"]
+[ext_resource type="Script" uid="uid://b536okju113ny" path="res://tutorialminigame/timer_glass.gd" id="10_l07v5"]
+[ext_resource type="Texture2D" uid="uid://dyhei458sff6o" path="res://assets/ui/tutorialminigame/score5.png" id="11_4gd5p"]
+[ext_resource type="Texture2D" uid="uid://dfoy74jysargn" path="res://assets/ui/tutorialminigame/timer_empty.png" id="16_uc4hw"]
+[ext_resource type="Texture2D" uid="uid://cmthydjlcgs48" path="res://assets/ui/tutorialminigame/timer_half.png" id="17_ns47k"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wtcfe"]
 size = Vector2(100, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dhsy"]
 size = Vector2(100, 100)
-
-[sub_resource type="LabelSettings" id="LabelSettings_7dhsy"]
-font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_cekfh"]
 font_size = 64
@@ -46,26 +55,78 @@ shape = SubResource("RectangleShape2D_7dhsy")
 
 [node name="Main" type="CanvasLayer" parent="." unique_id=546322891]
 
+[node name="ScoreGlass" type="TextureRect" parent="Main" unique_id=863350840]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -584.0
+offset_top = -808.0
+offset_right = -15.0
+offset_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.162, 0.162)
+pivot_offset_ratio = Vector2(1, 1)
+texture = ExtResource("8_ha538")
+script = ExtResource("6_ta8b3")
+textures = Array[Texture2D]([ExtResource("8_ha538"), ExtResource("7_w2awb"), ExtResource("8_7u51v"), ExtResource("9_xj4np"), ExtResource("10_76vtg"), ExtResource("11_4gd5p")])
+
 [node name="Score" type="Label" parent="Main" unique_id=538595364]
-offset_left = 933.0
-offset_top = 594.0
-offset_right = 1145.0
-offset_bottom = 639.0
-text = "Score: 000000"
-label_settings = SubResource("LabelSettings_7dhsy")
-horizontal_alignment = 2
-vertical_alignment = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -95.0
+offset_top = -62.0
+offset_right = -28.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
+theme = ExtResource("6_ha538")
+text = "0/25"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("5_1mqgv")
 
+[node name="TimerGlass" type="TextureRect" parent="Main" unique_id=398003174]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -559.0
+offset_top = -819.0
+offset_right = -204.0
+offset_bottom = -14.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.162, 0.162)
+pivot_offset_ratio = Vector2(1, 1)
+texture = ExtResource("7_tnaji")
+script = ExtResource("10_l07v5")
+textures = Array[Texture2D]([ExtResource("16_uc4hw"), ExtResource("17_ns47k"), ExtResource("7_tnaji")])
+
 [node name="Time" type="Label" parent="Main" unique_id=742907220]
-offset_left = 646.0
-offset_top = 594.0
-offset_right = 858.0
-offset_bottom = 639.0
-text = "Time: 120"
-label_settings = SubResource("LabelSettings_7dhsy")
-horizontal_alignment = 2
-vertical_alignment = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -268.0
+offset_top = -61.0
+offset_right = -196.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
+theme = ExtResource("6_ha538")
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("6_j5dnx")
 
 [node name="EndScreen" type="CanvasLayer" parent="." unique_id=137967040 node_paths=PackedStringArray("main_hud")]
@@ -81,36 +142,58 @@ offset_bottom = 746.0
 color = Color(0, 0, 0, 0.6431373)
 
 [node name="EndScore" type="Label" parent="EndScreen" unique_id=1392252352]
-offset_left = 337.0
-offset_top = 129.0
-offset_right = 761.0
-offset_bottom = 217.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -155.0
+offset_right = 212.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "Score: 000000"
+text = "Score: 25"
 label_settings = SubResource("LabelSettings_cekfh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="WinLose" type="Label" parent="EndScreen" unique_id=271454985]
-offset_left = 337.0
-offset_top = 248.0
-offset_right = 761.0
-offset_bottom = 336.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -74.0
+offset_right = 212.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "You Win!"
 label_settings = SubResource("LabelSettings_cekfh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="EndScreen" unique_id=1981233776]
-offset_left = 462.0
-offset_top = 383.0
-offset_right = 622.0
-offset_bottom = 438.0
+[node name="ContinueButton" type="Button" parent="EndScreen" unique_id=1981233776]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.29001
+offset_top = -209.0
+offset_right = 110.29004
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-text = "Retry"
+theme = ExtResource("6_ha538")
+text = "Continue"
 icon = SubResource("PlaceholderTexture2D_7dhsy")
 script = ExtResource("8_b27qj")
 
 [connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
-[connection signal="pressed" from="EndScreen/Button" to="EndScreen/Button" method="_on_pressed"]
+[connection signal="pressed" from="EndScreen/ContinueButton" to="EndScreen/ContinueButton" method="_on_pressed"]

@@ -1,11 +1,11 @@
 [style]
-[background arg="res://assets/backgrounds/outsidethecity.webp" fade="0.0"]
+[background arg="res://assets/backgrounds/city_scape.png" fade="0.0"]
 mainChar: {Blue} I shamble along the dusty walkway and up to the building’s door. It’s well-worn, yet elaborately carved. Warm, crimson light shines through the tinted glass at the top of the door. With no other sign of hospitality in sight, I let my exhaustion drag me through the entranceway…
 mainChar: …Woah.
-[background arg="res://assets/testBackground.png" fade="1.0"]
+[background arg="res://assets/backgrounds/bar_gibberish.png" fade="1.0"]
 mainChar: {Blue}I couldn’t help myself from being stunned. The establishment was lit in moody oranges and yellows, and draped in curtains made of a fine, velvety cloth. If it weren’t for the alien signage scattered about the building, you could easily mistake this for a swanky bar back on Earth.
 mainChar: {Blue}Before I can get too distracted, I bring my eyes to the bar counter and…
-join Silem center
+join Silem center [animation="Slide From Right" length="0.6" wait="true"]
 mainChar: {Blue}Is that a… goat?
 Narrator: {narr}The goat man cracks his third and four arm’s knuckles behind his back.
 mainChar: What {p}\
@@ -33,6 +33,7 @@ mainChar: Hey! The hell’s in it?! I-I’m not drinking that! Please, just tell
 Narrator: Staring at my suit, he sucks his teeth. Reaching under the counter, he tosses a strange tube on top of the counter and quickly affixes it to the drinking valve on my suit before I could even respond.
 Narrator: To my dismay, he pours the thick liquid into his end of the tube. The smell is immediate and overwhelming, striking my nose with a perfumey earthiness akin to incense and myrrh. I see the purple liquid slowly crawl its way up the drinking tube.
 Narrator: For some reason I can’t quite place — maybe the overwhelming thirst I’ve felt since landing, or the fate of eternal punishment — I feel inclined to listen to him. I set my mouth over the valve… And…
+[background arg="res://assets/backgrounds/bar_english.png" fade="1.4" wait="true"]
 # You drink the drink, wow, liquid covers the screnn!!!!!!
 mainChar: Jesus. That’s... Woah.
 Narrator: The cocktail makes its way down the hatch, through the piping, all the way to the processing plant, where the reception is... oddly welcoming to this foreign agent.
@@ -45,7 +46,41 @@ Silem: Name’s Silem, by the bye.
 set {Silem} = "Silem"
 mainChar: …{PlayerName}. My name is {PlayerName}. How... How do I get home?
 Silem: {PlayerName}. Hm. Where ya from?
+mainChar: Above. Earth. I’m not meant to be here. Please.
+Narrator: He laughs, cocking an eyebrow.
+Silem: Above? Whatchu talkin’ bout? Y’all ain’t too far. Suppose that explains the big ol’ suit, though.
+Silem: Gotten plenty of hearsay from the regulars about Earthlings finally bein’ able to trounce about the stars after gettin’ over their need for oxygen. I just figured it was all drunk ramblings, heh.
+mainChar: {Blue}Earthlings? Oxygen? So... this is...
+Silem: Anyway, open tab?
+mainChar: Where am I?!
+mainChar: {Blue}I slam my hands on the counter. He pauses, eyes shooting up at me.
+Silem: Mars. You’re on Mars, though with how much you been talkin’ my ear off, I can tell you ain’t mean to show up.
+Silem: This here is my bar, friend, so I suggest you watch that attitude ‘fore I throw you out myself.
+- I’m sorry. Please, I just want to go home.
+	mainChar: My spacecraft crashed and landed here and my communication channels are completely down. I don’t even know how the ship got that far...
+	Silem: Gon’ be a rough night for you... Everybody in the System passes through Mars pretty often, just no one stays for long.
+	mainChar: What, so Mars is like a big highway exit for you?
+	Silem: Yeah, sure. Whatever a highway exit is, anyhow. Now, listen, the first drink was on the house, but don’t expect no more handouts. It’s speed dating night, so folks been needin’ some liquid courage.
+- Screw you! Tell me how the hell to get out of here!
+	Silem: Ha! What did I just say? Got some damn nerve.
+	mainChar: Christ. Look. I just want to go home. For God’s sake, we were trying to land on the moon!
+	Silem: That’s too bad, friend. I ain’t your chauffeur. It’s speed dating night, so I’m sure you’ll find some fine folks here just itching to take you home.
+mainChar: Speed dating?
+Silem: What, that not a thing on Earth? You go around and talk to-
+mainChar: I know what that is! I just didn’t expect you to say that!
+Silem: Alright, alright. Regardless, it’d do ‘ya a lotta good to try and keep a low profile.
+mainChar: Why do you say that?
+Silem: Well… You know how I said that we’ve just figured out that Earthlings could head starbound? See, it’s causin’ a big stir all throughout the System.
+Silem: Feels like everybody’s got some wild opinion about how Earth’s gonna shake up the whole place. Some people’re fine with it, but others…
+[wait time="0.5" hide_text="false"]
+Silem: Let’s just make it clear that you probably wanna make some distance from anyone lookin’ at’cha funny. ‘s for the best.
+mainChar: {Blue}…Okay, maybe I was wrong about this not being hell. What does he even mean by that?! Am I actually gonna die?!
+Silem: Ugh, maybe I shouldn’t’ve said that. You look like you’re about to flip your wig.
+mainChar: You think?!
+Silem: Look, {PlayerName}, I may not be able to promise ‘ya that you’ll be completely safe, but the Swing Downtown is my bar. I’ll try to keep any funny business down as best I can.
+Silem: I’ll try to keep any funny business down as best I can. Just in case, though, I could help you with the whole blendin’ in thing in the meantime. If you’d like.
+mainChar: Sure, I guess...
+Silem: OK, then. Now listen close, y’hear?
 # start game
 [clear time="1.0"]
-[end_timeline]
-do Global.reset_game()
+do ScoreManager.jump_to_tutorial_minigame()

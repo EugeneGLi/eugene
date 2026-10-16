@@ -1,5 +1,5 @@
 [style name="FullScreen"]
-[background arg="res://assets/backgrounds/spaceship_placeholder.webp" fade="0.0"]
+[background arg="res://assets/backgrounds/terminal.png" fade="0.0"]
 PLUTO SPACE STATION MAIN CONTROL CENTER | JULY 4TH, 1969
 MONITORED BY THE UNITED STATES ORION ADMINISTRATION.
 ENTER UNIT\:[p align=center]\
