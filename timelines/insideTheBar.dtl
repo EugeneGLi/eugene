@@ -45,3 +45,7 @@ Silem: Name’s Silem, by the bye.
 set {Silem} = "Silem"
 mainChar: …{PlayerName}. My name is {PlayerName}. How... How do I get home?
 Silem: {PlayerName}. Hm. Where ya from?
+# start game
+[clear time="1.0"]
+[end_timeline]
+do Global.reset_game()

@@ -15,20 +15,20 @@ func _ready() -> void:
 	trajectory.clear_points()
 
 func _physics_process(delta: float) -> void:
-	
-	
-	
+
+
+
 	if not is_on_floor():
 		velocity.y += grav*delta
 	else:
-		
+
 		dir = Input.get_axis("left","right");
 		velocity.x = dir * speed
 		velocity.y = 0;
 		update_trajectory()
 		if(Input.is_action_pressed("up")):
 			launch()
-		
+
 	move_and_slide()
 
 func launch() -> void:
@@ -78,4 +78,3 @@ func update_trajectory() -> void: #draws the trajectory of player to mouse
 		simulation_time += step
 
 	trajectory.points = points
-	
