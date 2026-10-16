@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://b0kmq8h615dem"]
+
+[ext_resource type="Script" uid="uid://c8v05ipcx0hs1" path="res://tutorialminigame/scripts/spawner.gd" id="1_q01fg"]
+[ext_resource type="PackedScene" uid="uid://c826b6tnpv4u3" path="res://tutorialminigame/prefabs/enemy.tscn" id="2_mk24v"]
+[ext_resource type="Script" uid="uid://4jlyxe6nwnqu" path="res://tutorialminigame/scripts/player.gd" id="3_l42s3"]
+[ext_resource type="PackedScene" uid="uid://hv3qkulutq38" path="res://tutorialminigame/prefabs/bullet.tscn" id="4_4078a"]
+[ext_resource type="Script" uid="uid://lle4eiluop57" path="res://tutorialminigame/scripts/score.gd" id="5_1mqgv"]
+[ext_resource type="Script" uid="uid://bdxi1ev7pdj1g" path="res://tutorialminigame/scripts/time.gd" id="6_j5dnx"]
+[ext_resource type="Script" uid="uid://ddrrlyy1wepn" path="res://tutorialminigame/scripts/end_screen.gd" id="7_p5gre"]
+[ext_resource type="Script" uid="uid://dxwuc6yd4n4nj" path="res://tutorialminigame/scripts/retry.gd" id="8_b27qj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wtcfe"]
+size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dhsy"]
+size = Vector2(100, 100)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dhsy"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_cekfh"]
+font_size = 64
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7dhsy"]
+
+[node name="Galager" type="Node2D" unique_id=1174016509]
+
+[node name="Spawner" type="Marker2D" parent="." unique_id=343187201]
+position = Vector2(98, 55)
+script = ExtResource("1_q01fg")
+Enemy = ExtResource("2_mk24v")
+
+[node name="Player" type="Area2D" parent="." unique_id=1696739051]
+position = Vector2(74, 67)
+script = ExtResource("3_l42s3")
+Bullet = ExtResource("4_4078a")
+
+[node name="Player" type="Sprite2D" parent="Player" unique_id=1523436813]
+texture = SubResource("PlaceholderTexture2D_wtcfe")
+
+[node name="Gun" type="Marker2D" parent="Player" unique_id=2085277137]
+position = Vector2(60, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=43416535]
+shape = SubResource("RectangleShape2D_7dhsy")
+
+[node name="Main" type="CanvasLayer" parent="." unique_id=546322891]
+
+[node name="Score" type="Label" parent="Main" unique_id=538595364]
+offset_left = 933.0
+offset_top = 594.0
+offset_right = 1145.0
+offset_bottom = 639.0
+text = "Score: 000000"
+label_settings = SubResource("LabelSettings_7dhsy")
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("5_1mqgv")
+
+[node name="Time" type="Label" parent="Main" unique_id=742907220]
+offset_left = 646.0
+offset_top = 594.0
+offset_right = 858.0
+offset_bottom = 639.0
+text = "Time: 120"
+label_settings = SubResource("LabelSettings_7dhsy")
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("6_j5dnx")
+
+[node name="EndScreen" type="CanvasLayer" parent="." unique_id=137967040 node_paths=PackedStringArray("main_hud")]
+visible = false
+script = ExtResource("7_p5gre")
+main_hud = NodePath("../Main")
+
+[node name="Background" type="ColorRect" parent="EndScreen" unique_id=1851005530]
+offset_left = -20.0
+offset_top = -54.0
+offset_right = 1180.0
+offset_bottom = 746.0
+color = Color(0, 0, 0, 0.6431373)
+
+[node name="EndScore" type="Label" parent="EndScreen" unique_id=1392252352]
+offset_left = 337.0
+offset_top = 129.0
+offset_right = 761.0
+offset_bottom = 217.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Score: 000000"
+label_settings = SubResource("LabelSettings_cekfh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinLose" type="Label" parent="EndScreen" unique_id=271454985]
+offset_left = 337.0
+offset_top = 248.0
+offset_right = 761.0
+offset_bottom = 336.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "You Win!"
+label_settings = SubResource("LabelSettings_cekfh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="EndScreen" unique_id=1981233776]
+offset_left = 462.0
+offset_top = 383.0
+offset_right = 622.0
+offset_bottom = 438.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+text = "Retry"
+icon = SubResource("PlaceholderTexture2D_7dhsy")
+script = ExtResource("8_b27qj")
+
+[connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
+[connection signal="pressed" from="EndScreen/Button" to="EndScreen/Button" method="_on_pressed"]
