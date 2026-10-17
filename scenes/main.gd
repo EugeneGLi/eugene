@@ -6,9 +6,9 @@ var dialogic: Node
 var history: DialogueStack = DialogueStack.new()
 func _ready() -> void:
 	dialogic = Dialogic.start(ScoreManager.next_timeline_name)
-	var back_button = %BackButton
-	if back_button != null:
-		back_button.back_requested.connect(load_dialogue_state)
+
+	
+@warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void:
 	##saves the current state of Dialogic to a stack of saved states
 	#if(event.is_action_pressed("ui_accept")): # inputs such as space
