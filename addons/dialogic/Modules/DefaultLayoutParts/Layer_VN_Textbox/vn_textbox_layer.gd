@@ -120,6 +120,7 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export_subgroup("Panel")
 @export var actions_is_active: bool = false; 
 @export_file("*.tres") var actions_sub_panel: String = this_folder.path_join("vn_textbox_default_panel.tres")
+@export var panel_bottom_margin: int = 25;
 
 @export_subgroup("Color")
 @export var actions_color_use_global: bool = true
@@ -134,6 +135,9 @@ enum AnimationsNewText {NONE, WIGGLE}
 
 @export_subgroup("Buttons")
 @export var button_seperation: int = 33;
+@export var buttons_default_color: Color = Color.WHITE
+@export_file('*.ttf', '*.tres') var buttons_font: String = ""
+
 
 
 
@@ -183,13 +187,15 @@ func _apply_action_settings() -> void:
 	
 	actions_panel.size = action_box_size
 	actions_panel.position = action_box_position
-	
+	var margins: MarginContainer = %MarginContainer
+	margins.add_theme_constant_override("margin_top", panel_bottom_margin * -1.0)
 	var button_grid: HBoxContainer = %ButtonGrid
 	button_grid.add_theme_constant_override("separation",button_seperation)
 	
-	#var allActions: Array[Node] = button_grid.get_children()
+	var allActions: Array[Node] = button_grid.get_children()
 	
-	#var button_test: Button = %BackButton
+	for button:Button in allActions:
+		button.add_theme_color_override("font_color",buttons_default_color)
 	
 	
 ## Applies all text box settings to the scene.

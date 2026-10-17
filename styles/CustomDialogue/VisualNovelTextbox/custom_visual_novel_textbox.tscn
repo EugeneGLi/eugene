@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg" id="6_uch03"]
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
+[ext_resource type="Script" uid="uid://c7i0mdioi2kg6" path="res://styles/CustomDialogue/VisualNovelTextbox/back_button.gd" id="10_nqix2"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -215,7 +216,10 @@ box_size = Vector2(550, 150)
 name_label_box_panel = "res://styles/CustomDialogue/VisualNovelTextbox/vn_textbox_name_label_panel.tres"
 name_label_box_modulate = Color(0, 0, 0, 1)
 actions_sub_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres"
+panel_bottom_margin = null
 button_seperation = null
+buttons_default_color = null
+buttons_font = null
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=1985040569]
 unique_name_in_owner = true
@@ -408,10 +412,10 @@ mouse_filter = 2
 metadata/_edit_layout_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer" unique_id=1201744350]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/margin_top = -25
 
 [node name="ButtonGrid" type="HBoxContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer" unique_id=1422957288]
 unique_name_in_owner = true
@@ -427,6 +431,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Back"
+script = ExtResource("10_nqix2")
 
 [node name="QuickSaveButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=2114111228]
 layout_mode = 2
