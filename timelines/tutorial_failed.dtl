@@ -1,0 +1,8 @@
+[style]
+[background arg="res://assets/backgrounds/bar_english.png" fade="0.0"]
+join Silem center [animation="Slide From Right" length="0.8" wait="true"]
+mainChar: That was rough.
+Silem: Yeah, yeah, I don't need guff from you, Earthling.
+Silem: Anyway, you were throwing me off. Normally I'm a paragon of customer service.
+mainChar: You don't ever want to get off this planet? Do something else for a living?
+jump tutorial_passed/deep

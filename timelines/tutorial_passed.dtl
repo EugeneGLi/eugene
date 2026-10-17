@@ -1,0 +1,20 @@
+[style]
+[background arg="res://assets/backgrounds/bar_english.png" fade="0.0"]
+Narrator: As patrons file in, Silem moves gracefully from one to the next, his four arms moving like clockwork to keep the drinks flowing. He obviously has a knack for making people feel welcome.
+join Silem center [animation="Slide From Right" length="0.3" wait="true"]
+mainChar: Wow. You really have a knack for this.
+Silem: Ha, I wish. When you've been running a bar like this for as long as I have, customer service is second nature.
+label deep
+Silem: We all have our place in the universe. My place is to help everyone else feel all right with theirs.
+mainChar: You have this whole solar system. You really feel like the only place for you is behind this counter?
+Silem: The solar system might seem big to you, Earthling, but one day you'll realize the truth.
+Silem: Which is?
+Silem: The bigger your world gets, the easier it is to lose yourself in it.
+mainChar: Wow. That's heavy stuff.
+Silem: Eh. Not really. It's the same thing on Earth. Pretty much everywhere, really. In fact, that's why I started this bar.
+Silem: Folks come here, especially tonight, because they want to feel a real connection between two souls. There's no connection when you're alone on a spaceship, just you and the stars at 80% of the speed of light.
+Narrator: Silem glances at the clock.
+Silem: Speaking of... Speed dating is about to start. You better find a seat.
+leave Silem
+Narrator: Thank you for playing! Please remember to fill out the feedback form.
+do ScoreManager.reset_swing_downtown()

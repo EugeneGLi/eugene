@@ -5,17 +5,18 @@ var nameInitialize = false
 var dialogic: Node
 var history: DialogueStack = DialogueStack.new()
 func _ready() -> void:
-	dialogic = Dialogic.start("introScene")
+	dialogic = Dialogic.start(ScoreManager.next_timeline_name)
 	var back_button = %BackButton
 	if back_button != null:
 		back_button.back_requested.connect(load_dialogue_state)
 func _input(event: InputEvent) -> void:
 	##saves the current state of Dialogic to a stack of saved states
-	if(event.is_action_pressed("ui_accept")): # inputs such as space
-		save_dialogue_state()
+	#if(event.is_action_pressed("ui_accept")): # inputs such as space
+		#save_dialogue_state()
 	##returns the last saved Dialogic state, thus a rollback occurs
-	if(event.is_action_pressed("ui_cancel")):
-		load_dialogue_state()
+	#if(event.is_action_pressed("ui_cancel")):
+		#load_dialogue_state()
+	pass
 var saved_state
 var input_count = 0
 func save_dialogue_state():
