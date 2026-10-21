@@ -216,10 +216,6 @@ box_size = Vector2(550, 150)
 name_label_box_panel = "res://styles/CustomDialogue/VisualNovelTextbox/vn_textbox_name_label_panel.tres"
 name_label_box_modulate = Color(0, 0, 0, 1)
 actions_sub_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres"
-panel_bottom_margin = null
-button_seperation = null
-buttons_default_color = null
-buttons_font = null
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=1985040569]
 unique_name_in_owner = true

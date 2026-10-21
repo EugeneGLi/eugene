@@ -93,6 +93,8 @@ history/simple_history_enabled=false
 history/full_history_enabled=false
 history/full_history_save=false
 text/absolute_autopauses=false
+text/input_action="dialogic_default_action"
+text/autocolor_names=true
 
 [display]
 

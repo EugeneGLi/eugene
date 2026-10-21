@@ -11,6 +11,7 @@ RUNNING{p} . {p} . {p} .
 [color=red] ERROR\: MANUAL OVERRIDE DENIED[/color]
 [shake rate=20.0 level=5 connected=1][color=red] ERROR ERROR ERROR ERROR ERROR ERROR ERROR [/color][/shake]
 [clear time="0.75" background="false"]
+[signal arg="clear_history"]
 [style name="Dialogue"]
 [wait time="0.5" hide_text="false"]
 Narrator: {narr}A mettalic bang echoes through the spacecraft as the main computer fails. You, {PlayerName}, approach the panel and gives it a look over. It is clear that nothing is as it should be.

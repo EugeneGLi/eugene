@@ -44,3 +44,6 @@ func _to_string() -> String:
 			output += curr.to_string()
 			curr = curr.next
 		return output
+func clear() -> void:
+	head = null;
+	size = 0;

@@ -196,6 +196,7 @@ func _apply_action_settings() -> void:
 	
 	for button:Button in allActions:
 		button.add_theme_color_override("font_color",buttons_default_color)
+		button.focus_mode = Control.FOCUS_NONE
 	
 	
 ## Applies all text box settings to the scene.
