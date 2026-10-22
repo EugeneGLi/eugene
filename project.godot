@@ -89,7 +89,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-history/simple_history_enabled=false
+history/simple_history_enabled=true
 history/full_history_enabled=false
 history/full_history_save=false
 text/absolute_autopauses=false
@@ -97,6 +97,7 @@ text/input_action="dialogic_default_action"
 text/autocolor_names=true
 text/autoadvance_fixed_delay=1.0
 text/autoadvance_per_word_delay=0.05
+history/simple_history_save=true
 
 [display]
 

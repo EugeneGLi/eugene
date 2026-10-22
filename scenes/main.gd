@@ -12,6 +12,10 @@ func _ready() -> void:
 	dialogic = Dialogic.start(ScoreManager.next_timeline_name)
 	Dialogic.Text.text_finished.connect(save_dialogue_state)
 	Dialogic.signal_event.connect(on_dialog_signal)
+	#since we enabled history, theres an annoying button in the corner
+	#that allows us to enable history.
+	#since we have our own implementation of history, its unnecessary.
+	Dialogic.History
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void:
 	##saves the current state of Dialogic to a stack of saved states

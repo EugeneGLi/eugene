@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://c7i0mdioi2kg6" path="res://styles/CustomDialogue/VisualNovelTextbox/back_button.gd" id="10_nqix2"]
 [ext_resource type="Script" uid="uid://bgvsmojsct2pd" path="res://styles/CustomDialogue/VisualNovelTextbox/auto.gd" id="11_kmurq"]
 [ext_resource type="Script" uid="uid://0l54xvxhnqeu" path="res://styles/CustomDialogue/VisualNovelTextbox/skip_button.gd" id="11_t7cox"]
+[ext_resource type="Script" uid="uid://toplke65w3ut" path="res://styles/CustomDialogue/VisualNovelTextbox/history_button.gd" id="12_hx67m"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -462,6 +463,7 @@ text = "Load"
 layout_mode = 2
 size_flags_horizontal = 4
 text = "History"
+script = ExtResource("12_hx67m")
 
 [node name="SettingsButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=1777856577]
 layout_mode = 2
