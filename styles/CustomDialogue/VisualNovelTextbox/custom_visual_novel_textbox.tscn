@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
 [ext_resource type="Script" uid="uid://c7i0mdioi2kg6" path="res://styles/CustomDialogue/VisualNovelTextbox/back_button.gd" id="10_nqix2"]
+[ext_resource type="Script" uid="uid://bgvsmojsct2pd" path="res://styles/CustomDialogue/VisualNovelTextbox/auto.gd" id="11_kmurq"]
 [ext_resource type="Script" uid="uid://0l54xvxhnqeu" path="res://styles/CustomDialogue/VisualNovelTextbox/skip_button.gd" id="11_t7cox"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
@@ -443,7 +444,9 @@ text = "Q. Load"
 [node name="Auto" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=1744994471]
 layout_mode = 2
 size_flags_horizontal = 4
+toggle_mode = true
 text = "Auto"
+script = ExtResource("11_kmurq")
 
 [node name="SaveButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=929425735]
 layout_mode = 2
@@ -468,5 +471,6 @@ text = "Settings"
 [node name="SkipButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=151815845]
 layout_mode = 2
 size_flags_horizontal = 4
+toggle_mode = true
 text = "Skip"
 script = ExtResource("11_t7cox")
