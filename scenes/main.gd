@@ -19,6 +19,7 @@ func _input(event: InputEvent) -> void:
 	#if(event.is_action_pressed("ui_cancel")):
 		#load_dialogue_state()
 	pass
+@warning_ignore("unused_parameter")
 func save_dialogue_state(info: Dictionary):
 		var temp = Dialogic.get_full_state()
 		history.push(temp)
