@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
 [ext_resource type="Script" uid="uid://c7i0mdioi2kg6" path="res://styles/CustomDialogue/VisualNovelTextbox/back_button.gd" id="10_nqix2"]
+[ext_resource type="Script" uid="uid://0l54xvxhnqeu" path="res://styles/CustomDialogue/VisualNovelTextbox/skip_button.gd" id="11_t7cox"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -468,3 +469,4 @@ text = "Settings"
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Skip"
+script = ExtResource("11_t7cox")
