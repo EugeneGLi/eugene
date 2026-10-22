@@ -135,8 +135,10 @@ enum AnimationsNewText {NONE, WIGGLE}
 
 @export_subgroup("Buttons")
 @export var button_seperation: int = 33;
-@export var buttons_default_color: Color = Color.WHITE
 @export_file('*.ttf', '*.tres') var buttons_font: String = ""
+@export var buttons_default_color: Color = Color.WHITE
+@export var buttons_pressed_color: Color = Color.WHITE
+
 
 
 
@@ -197,6 +199,7 @@ func _apply_action_settings() -> void:
 	for button:Button in allActions:
 		button.add_theme_color_override("font_color",buttons_default_color)
 		button.focus_mode = Control.FOCUS_NONE
+		button.add_theme_color_override("font_color_pressed", buttons_pressed_color)
 	
 	
 ## Applies all text box settings to the scene.

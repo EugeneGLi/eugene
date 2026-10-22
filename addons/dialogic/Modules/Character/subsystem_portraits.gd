@@ -64,13 +64,15 @@ func _pack_extra_state() -> Dictionary:
 func _pause() -> void:
 	for node in character_nodes.values():
 		if node.has_meta('animation_node'):
-			node.get_meta('animation_node').pause()
+			if node.get_meta('animation_node') != null:
+				node.get_meta('animation_node').pause()
 
 
 func _resume() -> void:
 	for node in character_nodes.values():
 		if node.has_meta('animation_node'):
-			node.get_meta('animation_node').resume()
+			if node.get_meta('animation_node') != null:
+				node.get_meta('animation_node').resume()
 
 
 func _ready() -> void:

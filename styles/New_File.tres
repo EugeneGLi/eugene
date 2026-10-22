@@ -49,6 +49,8 @@ overrides = {
 "box_panel": "\"res://styles/dialogueBoxBody.tres\"",
 "box_size": "Vector2(1000, 200)",
 "buttons_default_color": "Color(1, 0.24194336, 0.1015625, 1)",
+"buttons_font": "\"res://styles/fonts/IBMPlexMono-Regular.ttf\"",
+"buttons_pressed_color": "Color(0.5623131, 0.9817708, 0.086927645, 1)",
 "italics_font": "\"res://styles/fonts/IBMPlexMono-Italic.ttf\"",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
 "name_label_box_offset": "Vector2(-41, -20)",
@@ -85,6 +87,9 @@ scene = ExtResource("9_huqvx")
 [sub_resource type="Resource" id="Resource_2ukya"]
 script = ExtResource("2_s8tse")
 scene = ExtResource("10_aodg4")
+overrides = {
+"show_open_button": "false"
+}
 
 [resource]
 script = ExtResource("11_8sjlb")
@@ -101,4 +106,4 @@ layer_info = {
 "16": SubResource("Resource_qat03"),
 "17": SubResource("Resource_2ukya")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "17"
