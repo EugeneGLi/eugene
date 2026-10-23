@@ -88,6 +88,7 @@ scene = ExtResource("9_huqvx")
 script = ExtResource("2_s8tse")
 scene = ExtResource("10_aodg4")
 overrides = {
+"font_custom_normal": "\"res://styles/fonts/CourierPrime-Bold.ttf\"",
 "show_open_button": "false"
 }
 
