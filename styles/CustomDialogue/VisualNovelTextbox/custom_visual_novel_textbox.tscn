@@ -204,6 +204,18 @@ _data = {
 
 [sub_resource type="FontVariation" id="FontVariation_v8y64"]
 
+[sub_resource type="GDScript" id="GDScript_kmurq"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _pressed() -> void:
+	if button_pressed:
+		Dialogic.History.open_history()
+	else:
+		Dialogic.History.close_history()
+"
+
 [node name="VN_TextboxLayer" type="Control" unique_id=939797878]
 layout_mode = 3
 anchors_preset = 15
@@ -462,7 +474,9 @@ text = "Load"
 [node name="HistoryButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=860635691]
 layout_mode = 2
 size_flags_horizontal = 4
+toggle_mode = true
 text = "History"
+script = SubResource("GDScript_kmurq")
 
 [node name="SettingsButton" type="Button" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid" unique_id=1777856577]
 layout_mode = 2
