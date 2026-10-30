@@ -218,7 +218,6 @@ box_size = Vector2(550, 150)
 name_label_box_panel = "res://styles/CustomDialogue/VisualNovelTextbox/vn_textbox_name_label_panel.tres"
 name_label_box_modulate = Color(0, 0, 0, 1)
 actions_sub_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres"
-buttons_pressed_color = null
 
 [node name="Animations" type="AnimationPlayer" parent="." unique_id=1985040569]
 unique_name_in_owner = true
@@ -398,6 +397,7 @@ name_label_root = NodePath("..")
 
 [node name="ActionsPanel" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=1961226245]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ButtonContainer" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel" unique_id=870198114]
 unique_name_in_owner = true

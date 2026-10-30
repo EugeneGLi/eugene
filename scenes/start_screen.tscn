@@ -50,11 +50,33 @@ text = "Swing Downtown"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=2023391322]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=36686909]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="New Game" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=2023391322]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
-text = "Start"
+text = "New Game"
+
+[node name="Load" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1141364961]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Load Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=9467292]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=1083689841]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Quit Game"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1315799340]
 material = SubResource("ShaderMaterial_r2jwc")
@@ -71,4 +93,7 @@ mouse_force_pass_scroll_events = false
 stream = ExtResource("4_r2jwc")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/New Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
