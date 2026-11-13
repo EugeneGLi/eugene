@@ -489,3 +489,6 @@ size_flags_horizontal = 4
 toggle_mode = true
 text = "Skip"
 script = ExtResource("11_t7cox")
+
+[connection signal="pressed" from="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid/QuickSaveButton" to="." method="_on_quick_save_button_pressed"]
+[connection signal="pressed" from="Anchor/AnimationParent/Sizer/DialogTextPanel/ActionsPanel/ButtonContainer/MarginContainer/ButtonGrid/QuickLoadButton" to="." method="_on_quick_load_button_pressed"]

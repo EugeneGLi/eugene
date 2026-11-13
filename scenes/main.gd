@@ -23,7 +23,6 @@ func _input(event: InputEvent) -> void:
 func save_dialogue_state(info: Dictionary):
 		var temp = Dialogic.get_full_state()
 		history.push(temp)
-		print("saved")
 
 func load_dialogue_state():
 		var temp = history.pop()

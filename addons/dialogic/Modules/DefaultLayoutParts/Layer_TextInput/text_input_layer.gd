@@ -17,6 +17,8 @@ extends DialogicLayoutLayer
 
 
 @export_group("Input Text")
+@export_subgroup("Length")
+@export var max_length: int = 0
 @export_subgroup("Color")
 @export var text_use_global_color: bool = true
 @export var text_custom_color: Color = Color.WHITE
@@ -63,6 +65,7 @@ func _apply_box_settings() -> void:
 	
 func _apply_text_settings() -> void:
 	var input_text: LineEdit = $DialogicNode_TextInput/TextInputPanel/VBoxContainer/InputField
+	input_text.max_length = max_length
 	if text_use_global_color:
 		input_text.add_theme_color_override(&"font_color", get_global_setting(&'font_color', text_custom_color) as Color)
 	else:

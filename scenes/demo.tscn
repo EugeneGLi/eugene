@@ -27,7 +27,7 @@ texture = ExtResource("2_ba4lm")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1237427466]
 layer = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1343745155]
+[node name="Shader" type="ColorRect" parent="CanvasLayer" unique_id=1343745155]
 material = SubResource("ShaderMaterial_l20p6")
 anchors_preset = 15
 anchor_right = 1.0

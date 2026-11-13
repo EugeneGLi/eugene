@@ -337,3 +337,31 @@ func _apply_sounds_settings() -> void:
 	type_sounds.pitch_variance = typing_sounds_pitch_variance
 	type_sounds.volume_variance = typing_sounds_volume_variance
 	type_sounds.ignore_characters = typing_sounds_ignore_characters
+
+
+func _on_quick_save_button_pressed() -> void:
+	var numQuickSaves: int
+	var dir := DirAccess.open("user://dialogic/saves/quick")
+	if dir != null:
+		numQuickSaves = (dir.get_directories().size());
+	else:
+		DirAccess.open("user://dialogic/saves").make_dir("quick");
+		numQuickSaves = 0
+	if(numQuickSaves <= Dialogic.VAR.Saves.QuickSlotMax - 1):
+		Dialogic.Save.save("quick/quicksave" +  str(numQuickSaves));
+		Dialogic.VAR.Saves.CurrentQSlot = numQuickSaves
+	else:
+		var quickSlotPointer: int = Dialogic.VAR.Saves.CurrentQSlot + 1
+		Dialogic.VAR.Saves.CurrentQSlot = quickSlotPointer
+		quickSlotPointer = quickSlotPointer % Dialogic.VAR.Saves.QuickSlotMax
+		Dialogic.Save.save("quick/quicksave" +  str(quickSlotPointer));
+
+
+func _on_quick_load_button_pressed() -> void:
+	var numQuickSaves: int = (DirAccess.open("user://dialogic/saves/quick").get_directories().size());
+	var slot_name = "quick/quicksave" + str(Dialogic.VAR.Saves.CurrentQSlot)
+	var state = Dialogic.Save.load_file(slot_name, "state.txt", null)
+	if state != null:
+		Dialogic.load_full_state(state)
+		Dialogic.Save.loaded.emit({"slot_name": slot_name})
+		print('[Dialogic] Loaded from slot "'+slot_name+'".')

@@ -34,6 +34,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_7ahrn")
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/vn_textbox_default_panel.tres"
+max_length = null
 
 [node name="DialogicNode_TextInput" type="Control" parent="." unique_id=970951876]
 layout_mode = 1
@@ -76,6 +77,7 @@ text = "Please enter some text:"
 autowrap_mode = 3
 
 [node name="InputField" type="LineEdit" parent="DialogicNode_TextInput/TextInputPanel/VBoxContainer" unique_id=144148452]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4217o")

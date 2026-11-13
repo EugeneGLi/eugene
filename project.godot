@@ -51,6 +51,12 @@ layout/default_style="res://styles/New_File.tres"
 variables={
 "Blue": "[color=#6dbecd]",
 "PlayerName": "Astro",
+"Saves": {
+"Auto": 0,
+"CurrentQSlot": 0,
+"Default": 0,
+"QuickSlotMax": 8
+},
 "Silem": "???",
 "narr": "[i][color=gray]",
 "p": "[pause=0.5!]"
@@ -98,6 +104,9 @@ text/autocolor_names=true
 text/autoadvance_fixed_delay=1.0
 text/autoadvance_per_word_delay=0.05
 history/simple_history_save=true
+save/default_slot="autosave"
+save/autosave=true
+save/encryption_password="123"
 
 [display]
 
