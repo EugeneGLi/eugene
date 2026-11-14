@@ -14,10 +14,12 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(on_dialog_signal)
 @warning_ignore("unused_parameter")
 func _input(event: InputEvent) -> void:
-	##saves the current state of Dialogic to a stack of saved states
-	##returns the last saved Dialogic state, thus a rollback occurs
-	#if(event.is_action_pressed("ui_cancel")):
-		#load_dialogue_state()
+	if Input.is_action_pressed("ui_skip"):
+		Dialogic.Inputs.auto_skip._set_enabled(true)
+	if Input.is_action_just_released("ui_skip"):
+		Dialogic.Inputs.auto_skip._set_enabled(false)
+
+
 	pass
 @warning_ignore("unused_parameter")
 func save_dialogue_state(info: Dictionary):
